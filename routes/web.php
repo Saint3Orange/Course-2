@@ -24,10 +24,42 @@ Route::get('/about', function () {
     return 'About page';
 });*/
 
-Route::group(['prefix' => 'my'], function () {
+/*Route::group(['prefix' => 'my'], function () {
     Route::get('/route/{name}', function ($name) {
         echo $name;
     });
 
+});*/
+
+
+/*use App\Http\Controllers\WelcomeController;
+
+Route::get('/', [WelcomeController::class, 'show']);*/
+/*Route::get('/', 'WelcomeController@show');*/
+
+/*use App\Http\Controllers\test\FirstTestController;
+use App\Http\Controllers\test\SecondTestController;
+
+Route::group(['prefix' => 'test'], function () {
+    Route::get('/1', [FirstTestController::class, 'index']);
+    Route::get('/2', [SecondTestController::class, 'index']);
 });
+
+use App\Http\Controllers\UserController;
+
+Route::get('/user/{name?}', [UserController::class, 'showName']);*/
+
+use App\Http\Controllers\WelcomeController;
+
+Route::group(['prefix' => 'my'], function () {
+    Route::get('/route/{name}', [WelcomeController::class, 'index']);
+    Route::get('/controller', [WelcomeController::class, 'get']);
+});
+
+
+
+
+
+
+
 
