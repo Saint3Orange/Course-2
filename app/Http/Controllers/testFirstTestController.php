@@ -1,6 +1,6 @@
 <?php
 
-/*namespace App\Http\Controllers\test;
+namespace App\Http\Controllers\test;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -11,5 +11,5 @@ class FirstTestController extends Controller
     {
         echo 'test 1';
     }
-}*/
+}
 

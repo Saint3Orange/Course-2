@@ -1,6 +1,6 @@
 <?php
 
-/*namespace App\Http\Controllers;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
@@ -10,4 +10,4 @@ class UserController extends Controller
     {
         echo $name ?: 'User not found';
     }
-}*/
+}

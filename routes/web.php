@@ -32,12 +32,11 @@ Route::get('/about', function () {
 });*/
 
 
-/*use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\WelcomeController;
 
-Route::get('/', [WelcomeController::class, 'show']);*/
-/*Route::get('/', 'WelcomeController@show');*/
+Route::get('/', [WelcomeController::class, 'show']);
 
-/*use App\Http\Controllers\test\FirstTestController;
+use App\Http\Controllers\test\FirstTestController;
 use App\Http\Controllers\test\SecondTestController;
 
 Route::group(['prefix' => 'test'], function () {
@@ -47,13 +46,13 @@ Route::group(['prefix' => 'test'], function () {
 
 use App\Http\Controllers\UserController;
 
-Route::get('/user/{name?}', [UserController::class, 'showName']);*/
+Route::get('/user/{name?}', [UserController::class, 'showName']);
 
-use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\MyController;
 
 Route::group(['prefix' => 'my'], function () {
-    Route::get('/route/{name}', [WelcomeController::class, 'index']);
-    Route::get('/controller', [WelcomeController::class, 'get']);
+    Route::get('/route/{name}', [MyController::class, 'index']);
+    Route::get('/controller', [MyController::class, 'get']);
 });
 
 

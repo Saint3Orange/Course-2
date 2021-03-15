@@ -12,18 +12,12 @@ class WelcomeController extends Controller
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-
 class WelcomeController extends Controller
 {
-    public function get()
+    public function show()
     {
-        echo 'test controller';
-    }
-    public function index($name) {
-        echo $name;
+        return view('welcome');
     }
 }
-
 
 
