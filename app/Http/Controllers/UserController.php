@@ -8,6 +8,16 @@ class UserController extends Controller
 {
     public function showName($name = null)
     {
-        echo $name ?: 'User not found';
+        $fakeArray = [
+            ['lesson' => 'Introduction', 'level' => '1'],
+            ['lesson' => 'Routes', 'level' => '2'],
+            ['lesson' => 'Controllers', 'level' => '3'],
+            ['lesson' => 'Views', 'level' => '4'],
+        ];
+
+        return view('user-name', [
+            'name' => $name,
+            'fakeData' => $fakeArray,
+        ]);
     }
 }

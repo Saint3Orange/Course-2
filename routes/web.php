@@ -53,6 +53,7 @@ use App\Http\Controllers\MyController;
 Route::group(['prefix' => 'my'], function () {
     Route::get('/route/{name}', [MyController::class, 'index']);
     Route::get('/controller', [MyController::class, 'get']);
+    Route::get('/view', [MyController::class, 'sendView']);
 });
 
 
