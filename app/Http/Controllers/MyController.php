@@ -14,7 +14,7 @@ class MyController extends Controller
     {
         echo $name;
     }
-    protected $Array = [
+    public $products = [
             ['name' => 'Яблоко', 'date' => '25.03.2021'],
             ['name' => 'Молоко', 'date' => '15.03.2021'],
             ['name' => 'Хлеб', 'date' => '10.03.2021'],
@@ -23,7 +23,7 @@ class MyController extends Controller
 
     public function sendView(){
     return view('test-product',
-            ['product' => $this->Array]);
+            ['product' => $this->products]);
 
     }
 }
