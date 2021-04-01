@@ -40,8 +40,8 @@ use App\Http\Controllers\test\FirstTestController;
 use App\Http\Controllers\test\SecondTestController;
 
 Route::group(['prefix' => 'test'], function () {
-    Route::get('/1', [FirstTestController::class, 'index']);
-    Route::get('/2', [SecondTestController::class, 'index']);
+    Route::get('/1', [\App\Http\Controllers\FirstTestController::class, 'index']);
+    Route::get('/2', [\App\Http\Controllers\SecondTestController::class, 'index']);
 });
 
 use App\Http\Controllers\UserController;
