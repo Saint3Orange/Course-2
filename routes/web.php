@@ -56,6 +56,10 @@ Route::group(['prefix' => 'my'], function () {
     Route::get('/view', [MyController::class, 'sendView']);
 });
 
+use App\http\Controllers\TaskController;
+
+Route::post('/task/store', [TaskController::class, 'store']);
+
 
 
 
