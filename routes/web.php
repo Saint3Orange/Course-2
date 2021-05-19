@@ -47,6 +47,7 @@ Route::group(['prefix' => 'test'], function () {
 use App\Http\Controllers\UserController;
 
 Route::get('/user/{name?}', [UserController::class, 'showName']);
+Route::post('/user/store', [UserController::class, 'store']);
 
 use App\Http\Controllers\MyController;
 

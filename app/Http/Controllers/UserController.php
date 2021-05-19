@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UserStoreRequest;
+use App\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -20,4 +22,12 @@ class UserController extends Controller
             'fakeData' => $fakeArray,
         ]);
     }
+
+    public function store(UserStoreRequest $request)
+    {
+        $data = $request->validated();
+        $user = User::firstOrCreate($data);
+        echo $user->toJson();
+    }
+
 }
