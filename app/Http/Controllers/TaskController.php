@@ -11,7 +11,7 @@ class TaskController extends Controller
     public function store(TaskStoreRequest $request)
     {
         $data = $request->validated();
-        $user = Task::firstOrCreate($data);
+        $user = Task::create($data);
         echo $user->toJson();
         dd($request->input('param1', 'default-value-1'));
     }

@@ -26,7 +26,7 @@ class UserController extends Controller
     public function store(UserStoreRequest $request)
     {
         $data = $request->validated();
-        $user = User::firstOrCreate($data);
+        $user = User::Create($data);
         echo $user->toJson();
     }
 

@@ -27,7 +27,7 @@ class TaskStoreRequest extends FormRequest
         return [
             'name' => 'required|string|min:1|max:256',
             'description' => 'required|string|min:1|max:256',
-            'user_id' => 'required|exists:tasks,user_id'
+            'user_id' => 'required|exists:users,user_id'
         ];
     }
 
