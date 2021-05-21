@@ -63,7 +63,7 @@ Route::post('/task/store', [TaskController::class, 'store']);
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->middleware('start_time')->name('home');
+Route::get('/home', 'HomeController@index')->middleware('start_time', 'admin.check')->name('home');
 
 use Illuminate\Support\Facades\Auth;
 
