@@ -64,3 +64,12 @@ Route::post('/task/store', [TaskController::class, 'store']);
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+use Illuminate\Support\Facades\Auth;
+
+Route::get('/my/auth-user', function(){
+    if (Auth::check()) {
+        dump($user = Auth::user());
+    }
+    else dump("Требуется авторизация");
+});
